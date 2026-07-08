@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 class Users extends Model
 {
     protected $table = 'users';
-    protected $primaryKey = 'id_user';
+    protected $primaryKey = 'id';
     protected $fillable = [
-        'id_user',
+        'id',
         'email',
-        'password',
-        'id_roles'
+        'password'
     ];
 }
