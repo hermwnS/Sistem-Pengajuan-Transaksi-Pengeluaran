@@ -13,23 +13,23 @@ class BudgetsSeeder extends Seeder
      */
     public function run(): void
     {
-        Budgets::create([
+        Budgets::factory()->create([
             'budget_name' => 'Budget 1',
             'budget_amount' => 1000000,
         ]);
-        Budgets::create([
+        Budgets::factory()->create([
             'budget_name' => 'Budget 2',
             'budget_amount' => 2000000,
         ]);
-        Budgets::create([
+        Budgets::factory()->create([
             'budget_name' => 'Budget 3',
             'budget_amount' => 3000000,
         ]);
-        Budgets::create([
+        Budgets::factory()->create([
             'budget_name' => 'Budget 4',
             'budget_amount' => 4000000,
         ]);
-        Budgets::create([
+        Budgets::factory()->create([
             'budget_name' => 'Budget 5',
             'budget_amount' => 5000000,
         ]);

@@ -12,4 +12,7 @@ class Roles extends Model
         'id_roles',
         'name'
     ];
+    protected $foreignKey = [
+        'id_user',
+    ];
 }

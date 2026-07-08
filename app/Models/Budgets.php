@@ -13,4 +13,8 @@ class Budgets extends Model
         'budget_name',
         'budget_amount',
     ];
+    protected $foreignKey = [
+        'id_category',
+        'id_user',
+    ];
 }

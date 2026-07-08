@@ -13,7 +13,7 @@ class SubmissionsSeeder extends Seeder
      */
     public function run(): void
     {
-        Submissions::create([
+        Submissions::factory()->create([
             'submission_name' => 'Submission 1',
             'submission_amount' => 100000000,
             'id_budget' => 1,
@@ -22,7 +22,7 @@ class SubmissionsSeeder extends Seeder
             'id_approval' => 1,
         ]);
 
-        Submissions::create([
+        Submissions::factory()->create([
             'submission_name' => 'Submission 2',
             'submission_amount' => 2000000,
             'id_budget' => 2,
@@ -31,7 +31,7 @@ class SubmissionsSeeder extends Seeder
             'id_approval' => 2,
         ]);
 
-        Submissions::create([
+        Submissions::factory()->create([
             'submission_name' => 'Submission 3',
             'submission_amount' => 3000000,
             'id_budget' => 3,
@@ -40,7 +40,7 @@ class SubmissionsSeeder extends Seeder
             'id_approval' => 3,
         ]);
 
-        Submissions::create([
+        Submissions::factory()->create([
             'submission_name' => 'Submission 4',
             'submission_amount' => 400000,
             'id_budget' => 4,
@@ -49,7 +49,7 @@ class SubmissionsSeeder extends Seeder
             'id_approval' => 4,
         ]);
 
-        Submissions::create([
+        Submissions::factory()->create([
             'submission_name' => 'Submission 5',
             'submission_amount' => 500000,
             'id_budget' => 5,

@@ -12,9 +12,12 @@ class Payments extends Model
         'id_payment',
         'payment_name',
         'payment_amount',
+    ];
+    protected $foreignKey = [
+        'id_submission',
         'id_budget',
+        'id_approval',
         'id_category',
         'id_user',
-        'id_approval',
     ];
 }

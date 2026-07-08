@@ -13,27 +13,27 @@ class PaymentsSeeder extends Seeder
      */
     public function run(): void
     {
-        Payments::create([
+        Payments::factory()->create([
             'payment_name' => 'Payment 1',
             'payment_amount' => 1000000,
             'id_submission' => 1,
         ]);
-        Payments::create([
+        Payments::factory()->create([
             'payment_name' => 'Payment 2',
             'payment_amount' => 2000000,
             'id_submission' => 2,
         ]);
-        Payments::create([
+        Payments::factory()->create([
             'payment_name' => 'Payment 3',
             'payment_amount' => 3000000,
             'id_submission' => 3,
         ]);
-        Payments::create([
+        Payments::factory()->create([
             'payment_name' => 'Payment 4',
             'payment_amount' => 4000000,
             'id_submission' => 4,
         ]);
-        Payments::create([
+        Payments::factory()->create([
             'payment_name' => 'Payment 5',
             'payment_amount' => 5000000,
             'id_submission' => 5,

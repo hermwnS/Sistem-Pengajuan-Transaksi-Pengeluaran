@@ -13,32 +13,27 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        Users::create([
-            'id' => 1,
+        Users::factory()->create([
             'email' => 'staff@contoh.com',
             'password' => 'password',
         ]);
 
-        Users::create([
-            'id' => 2,
+        Users::factory()->create([
             'email' => 'manager@contoh.com',
             'password' => 'password',
         ]);
 
-        Users::create([
-            'id' => 3,
+        Users::factory()->create([
             'email' => 'spv@contoh.com',
             'password' => 'password',
         ]);
 
-        Users::create([
-            'id' => 4,
+        Users::factory()->create([
             'email' => 'direktur@contoh.com',
             'password' => 'password',
         ]);
 
-        Users::create([
-            'id' => 5,
+        Users::factory()->create([
             'email' => 'finance@contoh.com',
             'password' => 'password',
         ]);

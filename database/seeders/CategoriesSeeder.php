@@ -13,42 +13,42 @@ class CategoriesSeeder extends Seeder
      */
     public function run(): void
     {
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 1,
             'category_name' => 'PO Produk',
         ]);
 
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 2,
             'category_name' => 'Perbaikan Kendaraan',
         ]);
 
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 3,
             'category_name' => 'Perbaikan Gedung',
         ]);
 
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 4,
             'category_name' => 'Perbaikan Komputer',
         ]);
 
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 5,
             'category_name' => 'Maintenance Website',
         ]);
 
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 6,
             'category_name' => 'Maintenance Server',
         ]);
 
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 7,
             'category_name' => 'Maintenance Jaringan',
         ]);
 
-        Categories::create([
+        Categories::factory()->create([
             'id_category' => 8,
             'category_name' => 'Biaya Kendaraan',
         ]);

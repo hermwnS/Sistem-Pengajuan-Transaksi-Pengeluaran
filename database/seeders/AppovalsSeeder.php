@@ -13,27 +13,27 @@ class ApprovalsSeeder extends Seeder
      */
     public function run(): void
     {
-        Approvals::create([
+        Approvals::factory()->create([
             'approval_name' => 'Approval 1',
             'status' => 'pending',
             'approved_by' => null,
         ]);
-        Approvals::create([
+        Approvals::factory()->create([
             'approval_name' => 'Approval 2',
             'status' => 'pending',
             'approved_by' => null,
         ]);
-        Approvals::create([
+        Approvals::factory()->create([
             'approval_name' => 'Approval 3',
             'status' => 'pending',
             'approved_by' => null,
         ]);
-        Approvals::create([
+        Approvals::factory()->create([
             'approval_name' => 'Approval 4',
             'status' => 'pending',
             'approved_by' => null,
         ]);
-        Approvals::create([
+        Approvals::factory()->create([
             'approval_name' => 'Approval 5',
             'status' => 'pending',
             'approved_by' => null,

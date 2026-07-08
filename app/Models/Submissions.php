@@ -11,10 +11,11 @@ class Submissions extends Model
     protected $fillable = [
         'id_submission',
         'submission_name',
-        'submission_amount',
-        'id_budget',
+    ];
+    protected $foreignKey = [
         'id_category',
-        'id_user',
+        'id_budget',
         'id_approval',
+        'id_user',
     ];
 }
