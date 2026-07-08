@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('approvals', function (Blueprint $table) {
             $table->id_approval();
-            $table->integer('id_user');
             $table->string('status');
             $table->string('approved_by');
             $table->timestamps();

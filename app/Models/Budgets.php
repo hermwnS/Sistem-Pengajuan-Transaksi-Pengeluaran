@@ -12,6 +12,5 @@ class Budgets extends Model
         'id_budget',
         'budget_name',
         'budget_amount',
-        'id_user'
     ];
 }

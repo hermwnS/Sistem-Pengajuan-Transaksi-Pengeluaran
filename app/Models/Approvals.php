@@ -11,6 +11,7 @@ class Approvals extends Model
     protected $fillable = [
         'id_approval',
         'id_user',
+        'approval_name',
         'status',
         'approved_by',
     ];
