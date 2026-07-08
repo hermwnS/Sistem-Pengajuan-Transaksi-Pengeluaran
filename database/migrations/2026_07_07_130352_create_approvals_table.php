@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id_approval();
             $table->integer('id_user');
             $table->string('status');
-            $table->integer('approved_by');
+            $table->string('approved_by');
             $table->timestamps();
         });
     }

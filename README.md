@@ -57,32 +57,66 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
-Akun Login Testing
+## Akun Login Testing
 Staff
-email:
-password:
+email: staff@contoh.com, 
+password: password
 
-SPV:
-email:
-password:
+SPV
+email: spv@contoh.com, 
+password: password
 
 Manager
-email:
-password:
+email: manager@contoh.com, 
+password: password
 
 Direktur
-email:
-password:
+email: direktur@contoh.com, 
+password: password
 
 Finance
-email:
-password:
+email: finance@contoh.com, 
+password: password
 
-Cara Instalasi
+## Cara Instalasi
 1. Download file source code dari Github
-2. Masukkan source code pada text editor(VS Code, Sublime Text, Notepad++)
+2. Masukkan file database (.sql) ke local server (phpmyadmin(xampp) atau laragon)
+3. Masukkan source code pada text editor(VS Code, Sublime Text, Notepad++)
 
-Cara Menjalankan Project
+## Cara Menjalankan Project
 Ketik command "php artisan serve" pada command prompt.
 
-Struktur Database
+## Struktur Database
+Tabel User
+id_users  | Int 
+email     | String
+password  | String
+
+Tabel Role
+id_roles  | Int  
+name      | String
+
+Tabel Submissions
+id_submissions   | Int 
+name             | String
+
+Tabel Approvals
+id_approval  | Int   
+id_user      | Int
+status       | String
+appove_by    | String
+
+Tabel Categories
+id_category     | Int
+category_name   | String
+
+Tabel Budgets
+id_budget    | Int
+budget_name  | String
+budget_amount| Decimal
+
+Tabel Payments
+id              | Int
+payment_name    | String
+payment_amount  | Decimal
+id_budget       | Int
