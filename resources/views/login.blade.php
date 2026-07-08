@@ -6,7 +6,7 @@
     <title>Login</title>
 </head>
 <body>
-    <div class="container">
+    <div class="container position-absolute top-50 start-50">
         <h1>Login</h1>
         <form method="POST" action="{{ route('login') }}">
             @csrf
