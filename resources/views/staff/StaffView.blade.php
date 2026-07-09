@@ -9,13 +9,16 @@
   <body>
     <h1>Staff Dashboard</h1>
     <aside>
-      <nav>
-        <ul>
-          <li><a href="{{ route('staff.dashboard') }}">Dashboard</a></li>
-          <li><a href="{{ route('staff.pengajuan') }}">Pengajuan</a></li>
-          <li><a href="{{ route('staff.riwayat') }}">Riwayat</a></li>
-        </ul>
-      </nav>
+      <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="staff/pengajuanView">Pengajuan</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="staff/riwayatView">Riwayat</a>
+        </li>
     </aside>
   </body>
 </html>

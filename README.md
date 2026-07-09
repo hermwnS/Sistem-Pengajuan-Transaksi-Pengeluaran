@@ -87,18 +87,23 @@ password: password
 Ketik command "php artisan serve" pada command prompt.
 
 ## Struktur Database
-Tabel User
-id_users  | Int 
-email     | String
-password  | String
+Tabel User: 
+id_users  | Int, 
+email     | String, 
+password  | String, 
 
-Tabel Role
-id_roles  | Int  
-name      | String
+Tabel Role :
+id_roles  | Int ,  
+name      | String, 
 
-Tabel Submissions
-id_submissions   | Int 
-name             | String
+Tabel Submissions:
+id_submissions   | Int , 
+name             | String, 
+tanggal          | date,
+nilai_pengajuan  | decimal
+deskripsi        | text
+lampiran_dokumen | string
+status           | enum
 
 Tabel Approvals
 id_approval  | Int   

@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('nilai_pengajuan', 10, 2);
             $table->text('deskripsi');
             $table->string('lampiran_dokumen')->nullable();
-            $table->enum('status', ['pending', 'approved', 'rejected', 'waiting SPV', 'waiting manager', 'waiting director','waiting finance', 'paid'])->default('pending');
+            $table->enum('status', ['draft', 'submitted', 'rejected', 'waiting SPV approved', 'waiting manager approved', 'waiting director approved','waiting finance approved', 'paid'])->default('pending');
             $table->timestamps();
         });
     }

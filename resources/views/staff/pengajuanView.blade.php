@@ -12,8 +12,8 @@
         <form action="{{ route('staff.pengajuan.submit') }}" method="POST">
             @csrf
             <div class="mb-2">
-                <label for="no" class="form-label">No. Pengajuan</label>
-                <input type="auto-generate" class="form-control" id="no" name="no" required>
+                <label for="no_pengajuan" class="form-label">No. Pengajuan</label>
+                <input type="auto-generate" class="form-control" id="no_pengajuan" name="no_pengajuan" required>
             </div>
             <div class="mb-2">
                 <label for="tanggal" class="form-label">Tanggal Pengajuan</label>
@@ -51,9 +51,38 @@
             </div>
             <div class="mb-2">
                 <label for="status" class="form-label">Status</label>
-                <input type="workflow" class="form-control" id="status" name="status" required>
+                <input type="enum" class="form-control" id="status" name="status" required>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
     </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">No</th>
+            <th scope="col">Tanggal</th>
+            <th scope="col">Nama Pengaju</th>
+            <th scope="col">Kategori</th>
+            <th scope="col">Nilai Pengajuan</th>
+            <th scope="col">Deskripsi</th>
+            <th scope="col">Lampiran</th>
+            <th scope="col">Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            foreach($pengajuan as $p){
+                <tr>
+                    <td>$p->no_pengajuan++</td>
+                    <td>$p->tanggal</td>
+                    <td>$p->nama_pengaju</td>
+                    <td>$p->kategor</td>
+                    <td>$p->nilai_pengajuan</td>
+                    <td>$p->deskripsi</td>
+                    <td>$p->lampiran</td>
+                    <td>$p->status</td>
+                </tr>
+            }
+        </tbody>
+    </table>
   </body>
 </html>
