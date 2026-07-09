@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id('id_user');
+            $table->foreignId('id_roles')->references('id_roles')->on('roles');
             $table->string('name');
             $table->string('email');
             $table->timestamps();

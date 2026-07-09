@@ -10,12 +10,12 @@ class Submissions extends Model
     protected $primaryKey = 'id_submission';
     protected $fillable = [
         'id_submission',
-        'submission_name',
-    ];
-    protected $foreignKey = [
-        'id_category',
-        'id_budget',
-        'id_approval',
         'id_user',
+        'id_category',
+        'tanggal',
+        'nilai_pengajuan',
+        'deskripsi',
+        'lampiran_dokumen',
+        'status',
     ];
 }

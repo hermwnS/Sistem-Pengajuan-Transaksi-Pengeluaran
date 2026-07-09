@@ -10,11 +10,8 @@ class Budgets extends Model
     protected $primaryKey = 'id_budget';
     protected $fillable = [
         'id_budget',
+        'id_category',
         'budget_name',
         'budget_amount',
-    ];
-    protected $foreignKey = [
-        'id_category',
-        'id_user',
     ];
 }

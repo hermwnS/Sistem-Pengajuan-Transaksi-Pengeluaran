@@ -10,14 +10,10 @@ class Payments extends Model
     protected $primaryKey = 'id_payment';
     protected $fillable = [
         'id_payment',
+        'id_submission',
+        'status_payment',
         'payment_name',
         'payment_amount',
-    ];
-    protected $foreignKey = [
-        'id_submission',
-        'id_budget',
-        'id_approval',
-        'id_category',
-        'id_user',
+        'payment_date',
     ];
 }

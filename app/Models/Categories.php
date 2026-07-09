@@ -12,8 +12,4 @@ class Categories extends Model
         'id_category',
         'category_name',
     ];
-    protected $foreignKey = [
-        'id_submission',
-        'id_user',
-    ];
 }

@@ -10,16 +10,10 @@ class Approvals extends Model
     protected $primaryKey = 'id_approval';
     protected $fillable = [
         'id_approval',
-        'approval_name',
-        'status',
-        'approved_by',
-    ];
-    protected $foreignKey = [
-        'id_user',
         'id_submission',
-        'id_budget',
-        'id_category',
         'id_roles',
-        'id_payment',
+        'status',
+        'catatan',
+        'approved_by',
     ];
 }

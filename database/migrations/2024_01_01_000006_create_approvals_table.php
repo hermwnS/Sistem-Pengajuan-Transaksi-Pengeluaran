@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('approvals', function (Blueprint $table) {
             $table->id('id_approval');
+            $table->foreignId('id_submission')->references('id_submission')->on('submissions')->onDelete('cascade');
+            $table->foreignId('id_roles')->references('id_roles')->on('roles')->onDelete('cascade');
             $table->string('status');
+            $table->text('catatan')->nullable();
             $table->string('approved_by');
             $table->timestamps();
         });

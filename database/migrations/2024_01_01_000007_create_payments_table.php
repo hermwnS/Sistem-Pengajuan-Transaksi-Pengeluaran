@@ -13,7 +13,10 @@ return new class extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->id('id_payment');
+            $table->foreignId('id_submission')->references('id_submission')->on('submissions')->onDelete('cascade');
             $table->string('payment_name');
+            $table->enum('status_payment', ['pending', 'completed', 'failed'])->default('pending'); 
+            $table->date('payment_date')->nullable();
             $table->decimal('payment_amount', 10, 2);
             $table->timestamps();
         });

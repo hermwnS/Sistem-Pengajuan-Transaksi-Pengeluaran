@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('budgets', function (Blueprint $table) {
             $table->id('id_budget');
+            $table->foreignId('id_category')->references('id_category')->on('categories')->onDelete('cascade');
             $table->string('budget_name');
-            $table->decimal('budget_amount');
+            $table->decimal('budget_amount', 10, 2);
             $table->timestamps();
         });
     }

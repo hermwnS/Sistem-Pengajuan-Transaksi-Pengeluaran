@@ -10,14 +10,7 @@ class Users extends Model
     protected $fillable = [
         'id_user',
         'email',
-        'password'
-    ];
-    protected $foreignKey = [
-        'id_roles',
-        'id_category',
-        'id_approval',
-        'id_budget',
-        'id_submission',
-        'id_payment',
+        'password',
+        'id_roles'
     ];
 }
