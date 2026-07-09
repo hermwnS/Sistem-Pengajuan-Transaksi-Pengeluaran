@@ -14,10 +14,10 @@
             <a class="nav-link" href="#">Dashboard</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="staff/pengajuanView">Pengajuan</a>
+            <a class="nav-link" href="staff/pengajuanStaffView">Pengajuan</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="staff/riwayatView">Riwayat</a>
+            <a class="nav-link" href="staff/riwayatStaffView">Riwayat</a>
         </li>
     </aside>
   </body>

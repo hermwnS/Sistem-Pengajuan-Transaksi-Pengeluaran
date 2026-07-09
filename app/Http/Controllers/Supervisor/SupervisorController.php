@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class SupervisorController extends Controller
 {
-    public function index() {
-        $data_pengajuan = Submissions::all();
+    public function index($id) {
+        $data_pengajuan = Submissions::with($id);
         return view('supervisor/SupervisorView');
     }
 

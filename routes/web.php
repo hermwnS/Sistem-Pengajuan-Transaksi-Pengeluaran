@@ -18,3 +18,23 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/staff', function(){
+    return view('staff/StaffView');
+});
+
+Route::get('/manager', function(){
+    return view('/manager/ManagerView');
+});
+
+Route::get('/direktur', function(){
+    return view('/direktur/DirekturView');
+});
+
+Route::get('/finance', function(){
+    return view('/finance/FinanceView');
+});
+
+Route::get('/supervisor', function(){
+    return view('/supervisor/SupervisorView');
+});

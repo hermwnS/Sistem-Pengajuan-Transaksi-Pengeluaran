@@ -14,7 +14,7 @@
                 <a class="nav-link" href="#">Dashboard</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="direktur/pengajuanMasukView">Pengajuan Masuk</a>
+                <a class="nav-link" href="direktur/pengajuanDirekturView">Pengajuan Masuk</a>
             </li>
         </ul>
     </aside>

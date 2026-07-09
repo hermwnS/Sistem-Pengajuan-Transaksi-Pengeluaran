@@ -40,6 +40,11 @@ class StaffController extends Controller
     }
 
     public function riwayatPengajuan(Request $request){
-        
+        $no_pengajuan = $request->$_GET['no_pengajuan'];
+        $tanggal = $request->$_GET['tanggal'];
+        $nama_pengaju = $request->$_GET['nama_pengaju'];
+        $deskripsi = $request->$_GET['deskripsi'];
+        $lampiran = $request->$_GET['lampiran'];
+        $status = $request->$_GET['status'];
     }
 }
