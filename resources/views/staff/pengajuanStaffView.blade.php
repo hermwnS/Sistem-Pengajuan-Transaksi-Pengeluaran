@@ -47,7 +47,7 @@
             </div>
             <div class="mb-2">
                 <label for="lampiran" class="form-label">Lampiran Dokumen</label>
-                <input type="file" class="form-control" id="lampiran" name="lampiran" required|pdf,jpg,jpeg,png|min:5MB>
+                <input type="file" class="form-control" id="lampiran" name="lampiran" required|pdf,jpg,jpeg,png|max:5MB>
             </div>
             <div class="mb-2">
                 <label for="status" class="form-label">Status</label>
