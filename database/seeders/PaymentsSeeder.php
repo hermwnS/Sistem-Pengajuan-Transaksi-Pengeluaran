@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Payments;
+use Illuminate\Support\Facades\DB;
 
 class PaymentsSeeder extends Seeder
 {
@@ -13,30 +12,12 @@ class PaymentsSeeder extends Seeder
      */
     public function run(): void
     {
-        Payments::factory()->create([
-            'payment_name' => 'Payment 1',
-            'payment_amount' => 1000000,
-            'id_submission' => 1,
-        ]);
-        Payments::factory()->create([
-            'payment_name' => 'Payment 2',
-            'payment_amount' => 2000000,
-            'id_submission' => 2,
-        ]);
-        Payments::factory()->create([
-            'payment_name' => 'Payment 3',
-            'payment_amount' => 3000000,
-            'id_submission' => 3,
-        ]);
-        Payments::factory()->create([
-            'payment_name' => 'Payment 4',
-            'payment_amount' => 4000000,
-            'id_submission' => 4,
-        ]);
-        Payments::factory()->create([
-            'payment_name' => 'Payment 5',
-            'payment_amount' => 5000000,
-            'id_submission' => 5,
+        DB::table('payments')->insert([
+            ['id_submission' => 1, 'payment_name' => 'Payment 1', 'status_payment' => 'pending', 'payment_date' => null, 'payment_amount' => 1000000],
+            ['id_submission' => 2, 'payment_name' => 'Payment 2', 'status_payment' => 'pending', 'payment_date' => null, 'payment_amount' => 2000000],
+            ['id_submission' => 3, 'payment_name' => 'Payment 3', 'status_payment' => 'pending', 'payment_date' => null, 'payment_amount' => 3000000],
+            ['id_submission' => 4, 'payment_name' => 'Payment 4', 'status_payment' => 'pending', 'payment_date' => null, 'payment_amount' => 4000000],
+            ['id_submission' => 5, 'payment_name' => 'Payment 5', 'status_payment' => 'pending', 'payment_date' => null, 'payment_amount' => 5000000],
         ]);
     }
 }

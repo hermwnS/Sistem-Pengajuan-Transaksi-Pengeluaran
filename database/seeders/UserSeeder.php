@@ -2,40 +2,44 @@
 
 namespace Database\Seeders;
 
-use App\Models\Users;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
-class DatabaseSeeder extends Seeder
+class UserSeeder extends Seeder
 {
-
     /**
      * Seed the application's database.
      */
     public function run(): void
     {
-        Users::factory()->create([
+        DB::table('users')->insert([
+            'name' => 'Staff',
             'email' => 'staff@contoh.com',
-            'password' => 'password',
+            'id_roles' => 1,
         ]);
 
-        Users::factory()->create([
+        DB::table('users')->insert([
+            'name' => 'Manager',
             'email' => 'manager@contoh.com',
-            'password' => 'password',
+            'id_roles' => 2,
         ]);
 
-        Users::factory()->create([
+        DB::table('users')->insert([
+            'name' => 'Supervisor',
             'email' => 'spv@contoh.com',
-            'password' => 'password',
+            'id_roles' => 3,
         ]);
 
-        Users::factory()->create([
+        DB::table('users')->insert([
+            'name' => 'Direktur',
             'email' => 'direktur@contoh.com',
-            'password' => 'password',
+            'id_roles' => 4,
         ]);
 
-        Users::factory()->create([
+        DB::table('users')->insert([
+            'name' => 'Finance',
             'email' => 'finance@contoh.com',
-            'password' => 'password',
+            'id_roles' => 5,
         ]);
     }
 }

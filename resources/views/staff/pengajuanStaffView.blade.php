@@ -9,7 +9,7 @@
   <body>
     <h1>Pengajuan</h1>
     <div class="container">
-        <form action="{{ route('staff.pengajuan.submit') }}" method="POST">
+        <form action="/staff/pengajuan" method="GET">
             @csrf
             <div class="mb-2">
                 <label for="no_pengajuan" class="form-label">No. Pengajuan</label>
@@ -47,7 +47,7 @@
             </div>
             <div class="mb-2">
                 <label for="lampiran" class="form-label">Lampiran Dokumen</label>
-                <input type="file" class="form-control" id="lampiran" name="lampiran" required>
+                <input type="file" class="form-control" id="lampiran" name="lampiran" required|pdf,jpg,jpeg,png|min:5MB>
             </div>
             <div class="mb-2">
                 <label for="status" class="form-label">Status</label>
@@ -70,7 +70,7 @@
             </tr>
         </thead>
         <tbody>
-            foreach($pengajuan as $p){
+            foreach($pengajuan as $p)
                 <tr>
                     <td>$p->no_pengajuan++</td>
                     <td>$p->tanggal</td>
@@ -81,7 +81,7 @@
                     <td>$p->lampiran</td>
                     <td>$p->status</td>
                 </tr>
-            }
+            endforeach;
         </tbody>
     </table>
   </body>

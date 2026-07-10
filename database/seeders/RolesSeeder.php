@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Roles;
+use Illuminate\Support\Facades\DB;
 
 class RolesSeeder extends Seeder
 {
@@ -13,25 +12,12 @@ class RolesSeeder extends Seeder
      */
     public function run(): void
     {
-        Roles::factory()->create([
-            'id_role' => 'STF',
-            'name' => 'staff'
-        ]);
-        Roles::factory()->create([
-            'id_role' => 'MGR',
-            'name' => 'manager'
-        ]);
-        Roles::factory()->create([
-            'id_role' => 'SPV',
-            'name' => 'supervisor'
-        ]);
-        Roles::factory()->create([
-            'id_role' => 'DIR',
-            'name' => 'director'
-        ]);
-        Roles::factory()->create([
-            'id_role' => 'FIN',
-            'name' => 'finance'
+        DB::table('roles')->insert([
+            ['id_roles' => 1, 'name' => 'staff'],
+            ['id_roles' => 2, 'name' => 'manager'],
+            ['id_roles' => 3, 'name' => 'supervisor'],
+            ['id_roles' => 4, 'name' => 'director'],
+            ['id_roles' => 5, 'name' => 'finance'],
         ]);
     }
 }

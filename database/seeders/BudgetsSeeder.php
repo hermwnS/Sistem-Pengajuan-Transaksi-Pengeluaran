@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use App\Models\Budgets;
+use Illuminate\Support\Facades\DB;
 
 class BudgetsSeeder extends Seeder
 {
@@ -13,25 +12,12 @@ class BudgetsSeeder extends Seeder
      */
     public function run(): void
     {
-        Budgets::factory()->create([
-            'budget_name' => 'Budget 1',
-            'budget_amount' => 1000000,
-        ]);
-        Budgets::factory()->create([
-            'budget_name' => 'Budget 2',
-            'budget_amount' => 2000000,
-        ]);
-        Budgets::factory()->create([
-            'budget_name' => 'Budget 3',
-            'budget_amount' => 3000000,
-        ]);
-        Budgets::factory()->create([
-            'budget_name' => 'Budget 4',
-            'budget_amount' => 4000000,
-        ]);
-        Budgets::factory()->create([
-            'budget_name' => 'Budget 5',
-            'budget_amount' => 5000000,
+        DB::table('budgets')->insert([
+            ['id_category' => 1, 'budget_name' => 'Budget 1', 'budget_amount' => 1000000],
+            ['id_category' => 2, 'budget_name' => 'Budget 2', 'budget_amount' => 2000000],
+            ['id_category' => 3, 'budget_name' => 'Budget 3', 'budget_amount' => 3000000],
+            ['id_category' => 4, 'budget_name' => 'Budget 4', 'budget_amount' => 4000000],
+            ['id_category' => 5, 'budget_name' => 'Budget 5', 'budget_amount' => 5000000],
         ]);
     }
 }

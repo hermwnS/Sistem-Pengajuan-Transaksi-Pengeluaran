@@ -19,22 +19,42 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::get('/staff', function(){
+Route::post('/staff', function(){
     return view('staff/StaffView');
 });
 
-Route::get('/manager', function(){
+Route::get('/staff/pengajuan', function(){
+    return view('staff/pengajuanStaffView');
+});
+
+Route::post('/manager', function(){
     return view('/manager/ManagerView');
 });
 
-Route::get('/direktur', function(){
+Route::get('/manager/pengajuan', function(){
+    return view('manager/pengajuanManagerView');
+});
+
+Route::post('/direktur', function(){
     return view('/direktur/DirekturView');
 });
 
-Route::get('/finance', function(){
+Route::get('/direktur/pengajuan', function(){
+    return view('direktur/pengajuanDirekturView');
+});
+
+Route::post('/finance', function(){
     return view('/finance/FinanceView');
 });
 
-Route::get('/supervisor', function(){
+Route::get('/finance/pengajuan', function(){
+    return view('/finance/pengajuanFinanceView');
+});
+
+Route::post('/supervisor', function(){
     return view('/supervisor/SupervisorView');
+});
+
+Route::get('/supervisor/pengajuan', function(){
+    return view('/supervisor/pengajuanSupervisorView');
 });
