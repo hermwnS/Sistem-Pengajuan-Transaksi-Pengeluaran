@@ -126,3 +126,10 @@ id              | Int
 payment_name    | String
 payment_amount  | Decimal
 id_budget       | Int
+
+## Relasi Database
+Tabel User: berelasi dengan tabel roles
+Tabel Submissions : berelasi dengan tabel user dan tabel kategori
+Tabel Payment : berelasi dengan tabel submissions
+Tabel budget : berelasi dengan tabel kategori
+Tabel approvals : berelasi dengan tabel roles dan tabel submissions

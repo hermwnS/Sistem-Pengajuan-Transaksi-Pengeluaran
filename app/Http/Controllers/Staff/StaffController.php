@@ -41,4 +41,54 @@ class StaffController extends Controller
         ];
         $this->$riwayat->get();
     }
+
+    public function kategoriPengajuan(){
+        $kategori = $this->$_POST['kategori'];
+        $nilai_pengajuan = $this->$_POST['nilai_pengajuan'];
+        $budget = $this->$_POST['budget'];
+        $status = $this->$_POST['status'];
+        switch($kategori){
+            case 1:
+                if($kategori == "PO Produk"){
+                    return redirect('direktur/pengajuanDirekturView');
+                }
+                break;
+            case 2:
+                if($kategori != "PO Produk" && $nilai_pengajuan > 5000000){
+                    return redirect('supervisor/pengajuanSupervisorView')->to('/manager/pengajuanManagerView');
+                }
+                break;
+            case 3:
+                if($nilai_pengajuan > 10000000){
+                    return redirect('manager/pengajuanManagerView')->to('direktur/pengajuanDirekturView');
+                }
+                break;
+            case 4:
+                if($budget < $nilai_pengajuan){
+                    return "Status: Ditolak";
+                }
+                break;
+            case 5:
+                if($status == "Reject"){
+                    return "Status: Ditolak";
+                }
+                break;
+            case 6:
+                if($status == "Approve"){
+                    return "Status: Menunggu finance";
+                }
+                break;
+            case 7:
+                if($budget > $nilai_pengajuan){
+                    return "Proses Pembayaran";
+                    break;
+                }else{
+                    return "Ditolak";
+                    break;
+                }
+            default:
+                return "Draft";
+                break;
+        }
+    }
 }
