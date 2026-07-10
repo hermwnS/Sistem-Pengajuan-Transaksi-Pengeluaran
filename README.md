@@ -84,7 +84,8 @@ password: password
 3. Masukkan source code pada text editor(VS Code, Sublime Text, Notepad++)
 
 ## Cara Menjalankan Project
-Ketik command "php artisan serve" pada command prompt.
+1. Ketik command "php artisan serve" pada command prompt.
+2. Ketik /dashboard samping ip address server laravel untuk mengakses login laravel breeze
 
 ## Struktur Database
 Tabel User: 
