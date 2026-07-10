@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class DirekturController extends Controller
 {
-    public function index($id){
+    public function index(int $id){
         $dataApproval = Submissions::with($id);
         return view('direktur/DirekturView', compact($dataApproval));
     }
