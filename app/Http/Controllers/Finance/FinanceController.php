@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class FinanceController extends Controller
 {
-    public function index($id){
+    public function index(int $id){
         $data_pengajuan = Submissions::with($id);
         return view('finance/FinanceView', compact($data_pengajuan));
     }

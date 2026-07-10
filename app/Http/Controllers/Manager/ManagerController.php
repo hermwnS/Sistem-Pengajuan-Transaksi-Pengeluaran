@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class ManagerController extends Controller
 {
-    public function index($id){
+    public function index(int $id){
         $data_pengajuan = Submissions::with($id);
         return view('manager/ManagerView', compact($data_pengajuan));
     }
