@@ -23,7 +23,7 @@
             </tr>
         </thead>
         <tbody>
-            foreach($pengajuan as $p){
+            foreach($pengajuan as $p)
                 <tr>
                     <td>$p->no_pengajuan++</td>
                     <td>$p->tanggal</td>
@@ -34,7 +34,7 @@
                     <td>$p->lampiran</td>
                     <td>$p->status</td>
                 </tr>
-            }
+            endforeach;
         </tbody>
     </table>
   </body>
