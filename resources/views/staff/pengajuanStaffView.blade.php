@@ -9,7 +9,7 @@
   <body>
     <h1>Pengajuan</h1>
     <div class="container">
-        <form action="/staff/pengajuan" method="GET">
+        <form action="/staff/pengajuan" method="POST">
             @csrf
             <div class="mb-2">
                 <label for="no_pengajuan" class="form-label">No. Pengajuan</label>

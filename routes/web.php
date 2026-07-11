@@ -21,11 +21,11 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::post('/staff', function(){
+Route::get('/staff', function(){
     return view('staff/StaffView');
-});
+})->middleware(['auth', 'verified'])->name('staff');
 
-Route::get('/staff/pengajuan', function(){
+Route::post('/staff/pengajuan', function(){
     return view('staff/pengajuanStaffView');
 });
 
@@ -33,11 +33,11 @@ Route::get('/staff/pengajuan/{id}', function(int $id){
     return new SubmissionsResource(Submissions::findorFail($id));
 });
 
-Route::post('/manager', function(){
+Route::get('/manager', function(){
     return view('/manager/ManagerView');
-});
+})->middleware(['auth','verified'])->name('manager');
 
-Route::get('/manager/pengajuan', function(){
+Route::post('/manager/pengajuan', function(){
     return view('manager/pengajuanManagerView');
 });
 
@@ -45,9 +45,9 @@ Route::get('/manager/pengajuan/{id}', function(int $id){
     return new SubmissionsResource(Submissions::findorFail($id));
 });
 
-Route::post('/direktur', function(){
+Route::get('/direktur', function(){
     return view('/direktur/DirekturView');
-});
+})->middleware(['auth','verified'])->name('direktur');
 
 Route::get('/direktur/pengajuan', function(){
     return view('direktur/pengajuanDirekturView');
@@ -57,9 +57,9 @@ Route::get('/direktur/pengajuan/{id}', function(int $id){
     return new SubmissionsResource(Submissions::findorFail($id));
 });
 
-Route::post('/finance', function(){
+Route::get('/finance', function(){
     return view('/finance/FinanceView');
-});
+})->middleware(['auth','verified'])->name('finance');
 
 Route::get('/finance/pengajuan', function(){
     return view('/finance/pengajuanFinanceView');
@@ -69,9 +69,9 @@ Route::get('/finance/pengajuan/{id}', function(int $id){
     return new SubmissionsResource(Submissions::findorFail($id));
 });
 
-Route::post('/supervisor', function(){
+Route::get('/supervisor', function(){
     return view('/supervisor/SupervisorView');
-});
+})->middleware(['auth','verified'])->name('supervisor');
 
 Route::get('/supervisor/pengajuan', function(){
     return view('/supervisor/pengajuanSupervisorView');

@@ -19,6 +19,9 @@
         <li class="nav-item">
             <a class="nav-link" href="staff/riwayatStaffView">Riwayat</a>
         </li>
+        <li class="nav-item">
+            <button type="logout" class="nav-link" href="">Logout</button>
+        </li>
     </aside>
   </body>
 </html>
