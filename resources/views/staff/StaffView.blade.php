@@ -20,7 +20,10 @@
             <a class="nav-link" href="staff/riwayatStaffView">Riwayat</a>
         </li>
         <li class="nav-item">
-            <button type="logout" class="nav-link" href="">Logout</button>
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" class="nav-link btn btn-link">Logout</button>
+            </form>
         </li>
     </aside>
   </body>

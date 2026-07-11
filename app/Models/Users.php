@@ -13,4 +13,28 @@ class Users extends Authenticatable
         'password',
         'id_roles'
     ];
+
+    /**
+     * Relasi ke model Roles
+     */
+    public function role()
+    {
+        return $this->belongsTo(Roles::class, 'id_roles', 'id_roles');
+    }
+
+    /**
+     * Cek apakah user memiliki role tertentu
+     */
+    public function hasRole(string $roleName)
+    {
+        return $this->role()->where('name', $roleName)->exists();
+    }
+
+    /**
+     * Dapatkan nama role user
+     */
+    public function getRoleName()
+    {
+        return $this->role->name ?? null;
+    }
 }
