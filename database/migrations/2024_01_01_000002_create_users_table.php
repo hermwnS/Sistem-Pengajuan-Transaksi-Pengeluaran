@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('id_roles')->references('id_roles')->on('roles');
             $table->string('name');
             $table->string('email');
+            $table->string('password');
             $table->timestamps();
         });
     }
